@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.main{
+    flex-direction: column;
+    background-color: #5200a3;
+    height: 100%;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-admin-container{
+    margin-bottom: 10%;
+    align-items: center;
+    display: flex;
+    color: #5200a3;
+    background-color: green;
+    justify-content: center;
+    width: 20%;
+    height: 10%;
+}
+
+#login-staff-container{
+    align-items: center;
+    display: flex;
+    color: #5200a3;
+    background-color: green;
+    justify-content: center;
+    width: 20%;
+    height: 10%;
+}

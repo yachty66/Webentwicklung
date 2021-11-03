@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="main">
+        <button id="list-staffs">Staffs</button>
+        <button id="list-students">Students</button>
+
+        <div class="login-admin" id="form-admin">
+            <form id="form_id" method="post" name="myform">
+                <table>
+                    <tr>
+                        <td>Username:</td>
+                        <td>
+                            <input type="text" name="user" id="username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>
+                            <input type="password" name="user_pass" id="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Login" id="submit" onclick="getCredentials()">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.main{
+    flex-direction: column;
+    background-color: #5200a3;
+    height: 100%;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-admin{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #5200a3;
+    background-color: green;
+    width: 30%;
+    height: 30%;
+}
+
+
+#login-staff-container{
+    align-items: center;
+    display: flex;
+    color: #5200a3;
+    background-color: green;
+    justify-content: center;
+    width: 20%;
+    height: 10%;
+}
+
+#list-students{
+    display: none;
+    align-items: center;
+    color: #5200a3;
+    background-color: green;
+    justify-content: center;
+    width: 20%;
+    height: 10%;
+}
+
+#list-staffs{
+    margin-bottom: 10%;
+    display: none;
+    align-items: center;
+    color: #5200a3;
+    background-color: green;
+    justify-content: center;
+    width: 20%;
+    height: 10%;
+}
