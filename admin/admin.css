@@ -6,20 +6,23 @@ body {
     margin: 0;
 }
 
-.main{
+#main{
     flex-direction: column;
     background-color: #5200a3;
     height: 100%;
     width: 1440px;
-    display: flex;
+    /*display: flex;*/
+    display: none;
     align-items: center;
     justify-content: center;
 }
 
 .login-admin{
+    display: none;
     justify-content: center;
     align-items: center;
-    display: flex;
+    /*display: flex;*/
+    display: none;
     color: #5200a3;
     background-color: green;
     width: 30%;
@@ -29,7 +32,8 @@ body {
 
 #login-staff-container{
     align-items: center;
-    display: flex;
+    /*display: flex;*/
+    display: none;
     color: #5200a3;
     background-color: green;
     justify-content: center;
@@ -56,4 +60,128 @@ body {
     justify-content: center;
     width: 20%;
     height: 10%;
+}
+
+.main-for-lists{
+    background-color: #5200a3;
+    height: 100%;
+    width: 1440px;
+    display: none;
+
+    flex-direction: column;
+
+
+}
+
+#buttons-student{
+    width: 100%;
+    height: 10%;
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+#add-student{
+    margin-right: 10%;
+    justify-content: center;
+    color: #5200a3;
+    width: 100px;
+    background-color: green;
+    /*display: none;*/
+    display: flex;
+}
+
+#update-student{
+    justify-content: center;
+    color: #5200a3;
+    width: 100px;
+    background-color: green;
+    /*display: none;*/
+    display: flex;
+}
+
+#delete-student{
+    margin-left: 10%;
+    justify-content: center;
+    color: #5200a3;
+    width: 100px;
+    background-color: green;
+    /*display: none;*/
+    display: flex;
+}
+
+ul li {
+    background: #20B81D;
+    margin: 5px;
+    color: #5200a3;
+}
+
+.container-for-list-order{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.list-order{
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+    /*display: flex;*/
+    height: 100%;
+    width: 50%;
+    background-color: green;
+}
+
+
+.main-for-form{
+    background-color: #5200a3;
+    height: 100%;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-for-form{
+    width: 50%;
+    background-color: green;
+    height: 80%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+label{
+    color: #5200a3;
+}
+
+p{
+    color: #5200a3;
+}
+
+input{
+    color: #5200a3;
+}
+
+.distance-submit{
+    margin-top: 19px;
+}
+
+option{
+    color: #5200a3;
+}
+
+select{
+    color: #5200a3;
+}
+
+.error{
+    margin-top: 19px;
+    color: #5200a3;
+    display: none;
 }

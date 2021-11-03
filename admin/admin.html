@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-    <div class="main">
-        <button id="list-staffs">Staffs</button>
-        <button id="list-students">Students</button>
-
+    <div class="main" id="main">
+        <!--FORM-->
         <div class="login-admin" id="form-admin">
             <form id="form_id" method="post" name="myform">
                 <table>
@@ -35,8 +33,73 @@
                 </table>
             </form>
         </div>
+
+        <!--List Students-->
+        <button id="list-staffs">Staffs</button>
+        <button id="list-students" onclick="onClickStudentsButton()">Students</button>
     </div>
-    <script src="admin.js"></script>
+    <div class="main-for-lists" id="main-for-lists">
+        <!--List Students-->
+        <div id="buttons-student">
+            <button id="add-student" onclick="onClickAddStudentsButton()">Add</button>
+            <button id="update-student">Update</button>
+            <button id="delete-student">Delete</button>
+        </div>    
+        <div class="container-for-list-order">
+            <div class="list-order" id="list-order">
+                <ul>
+                    <li>Student</li>
+                    <li>Student</li>
+                    <li>Student</li>
+                    <li>Student</li>
+                    <li>Student</li>
+                    <li>Student</li>
+                    <li>Student</li>
+                    <li>Student</li>
+                    <li>Student</li>
+                    <li>Student</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-for-form" id="main-for-form">
+        <div class="container-for-form">
+            <form">
+                <p>*Student_Id:</p>
+                <div><input type="text" id="Student_Id" placeholder="Student_Id"></div>
+                <p>*First_Name:</p>
+                <div><input type="text" id="First_Name" placeholder="First_Name"></div>
+                <p>Last_Name:</p>
+                <div><input type="text" id="Last_Name" placeholder="Last_Name"></div>
+                <p>DOB:</p>
+                <div><input type="text" id="DOB" placeholder="DOB"></div>
+                <p>Gender:</p>
+                <div><input type="radio" id="GenderFemale" placeholder="Gender" name="test"></div>
+                <label for="html">Female</label>
+                <div><input type="radio" id="GenderMale" placeholder="Gender" name="test"></div>
+                <label for="html">Male</label>
+                <p>*Department:</p>
+                <select name="departments" id="Departments">
+                    <option value="empty">------</option>
+                    <option value="Department_1">Department_1</option>
+                    <option value="Department_2">Department_2</option>
+                    <option value="Department_3">Department_3</option>
+                    <option value="Department_4">Department_4</option>
+                </select>
+                <p>*Email_Id:</p>
+                <div><input type="text" id="Email_Id" placeholder="Email_Id"></div>
+                <div class="distance-submit"><input class="submit" type="submit" value="Submit" onclick="onClickCheckForm()"></div>
+                <div class="error" id="error">*Fill out all mandatory fields</div>
+
+                <ul id='list'>
+                    <li> <b>Topics</b></li> 
+                </ul>
+
+
+            </form>
+        </div>
+    </div>
     
+    <script src="admin.js"></script>    
 </body>
 </html>
