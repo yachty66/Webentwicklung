@@ -1,0 +1,65 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+#main{
+    flex-direction: column;
+    background-color: #5200a3;
+    height: 100%;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-staff{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #5200a3;
+    background-color: green;
+    width: 30%;
+    height: 30%;
+}
+
+
+.container-for-course-list{
+    width: 50%;
+    background-color: green;
+    height: 80%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+ul li {
+    background: #20B81D;
+    margin: 5px;
+    color: #5200a3;
+}
+
+
+.list-order{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    background-color: green;
+}
+
+.container-for-list-order{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+select{
+    color: #5200a3;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body>
+    <div class="main" id="main">
+        <!--FORM-->
+        <div class="login-staff" id="form-staff">
+            <form id="form_id" method="post" name="myform">
+                <table>
+                    <tr>
+                        <td>Username:</td>
+                        <td>
+                            <input type="text" name="user" id="username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>
+                            <input type="password" name="user_pass" id="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Login" id="submit" onclick="getCredentials()">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="container-for-course-list" id="container-for-course-list">
+            <div class="container-for-list-order">
+                <div class="list-order" id="list-order">
+                    <ul id='list'>
+                        <li>
+                            <label>Math</label>
+                            <select name="departments" id="Departments">
+                                <option value="empty">Students</option>
+                                <option value="Department_1">Student_1</option>
+                                <option value="Department_2">Student_2</option>
+                                <option value="Department_3">Student_3</option>
+                                <option value="Department_4">Student_4</option>
+                            </select>
+                        </li>
+                        <br>
+                        <li>
+                            <label>CS I</label>
+                            <select name="departments" id="Departments">
+                                <option value="empty">Students</option>
+                                <option value="Department_1">Student_1</option>
+                                <option value="Department_2">Student_2</option>
+                                <option value="Department_3">Student_3</option>
+                                <option value="Department_4">Student_4</option>
+                            </select>
+                        </li>
+                        <br>
+                        <li>
+                            <label>CS II</label>
+                            <select name="departments" id="Departments">
+                                <option value="empty">Students</option>
+                                <option value="Department_1">Student_1</option>
+                                <option value="Department_2">Student_2</option>
+                                <option value="Department_3">Student_3</option>
+                                <option value="Department_4">Student_4</option>
+                            </select>
+                        </li>
+                        <br>
+                        <li>
+                            <label>Data structures</label>
+                            <select name="departments" id="Departments">
+                                <option value="empty">Students</option>
+                                <option value="Department_1">Student_1</option>
+                                <option value="Department_2">Student_2</option>
+                                <option value="Department_3">Student_3</option>
+                                <option value="Department_4">Student_4</option>
+                            </select>
+                        </li>
+                        <br>
+                        <li>
+                            <label>Python</label>
+                            <select name="departments" id="Departments">
+                                <option value="empty">Students</option>
+                                <option value="Department_1">Student_1</option>
+                                <option value="Department_2">Student_2</option>
+                                <option value="Department_3">Student_3</option>
+                                <option value="Department_4">Student_4</option>
+                            </select>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="staff.js"></script>
+</body>
+</html>

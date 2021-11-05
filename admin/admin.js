@@ -43,6 +43,11 @@ function onClickAddStudentsButton(){
     document.getElementById("update-student").style.display = "none";
     document.getElementById("delete-student").style.display = "none";
     document.getElementById("list-order").style.display = "none";
+
+    document.getElementById("main-for-form").style.display = "flex";
+    document.getElementById("main-for-lists").style.display = "none";
+
+    
 }
 
 function onClickCheckForm(){
@@ -64,6 +69,10 @@ function onClickCheckForm(){
         document.getElementById("main-for-lists").style.display = "flex";
         document.getElementById("buttons-student").style.display = "flex";
         document.getElementById("list-order").style.display = "flex";
+
+        document.getElementById("add-student").style.display = "flex";
+        document.getElementById("update-student").style.display = "flex";
+        document.getElementById("delete-student").style.display = "flex";
 
         var liStudent_Id = "<li>" + "Student_Id: " + Student_Id + "</li>";
         document.getElementById("list").insertAdjacentHTML('beforeend', liStudent_Id);
@@ -93,7 +102,6 @@ function onClickCheckForm(){
             var liGenderFemale = "<li>" + "Gender: " + "</li>";
             document.getElementById("list").insertAdjacentHTML('beforeend', liGenderFemale);
         }
-
         if (document.getElementById('GenderFemale').checked == true){
             var liGenderFemale = "<li>" + "Gender: " + "Female" + "</li>";
             document.getElementById("list").insertAdjacentHTML('beforeend', liGenderFemale);
@@ -115,6 +123,92 @@ function onClickCheckForm(){
 }
 
 
+//staff
+function onClickStaffsButton(){
+    document.getElementById("list-students").style.display = "none";
+    document.getElementById("list-staffs").style.display = "none";
+    document.getElementById("main").style.display = "none";
+    document.getElementById("main-for-list-staff").style.display = "flex";
+
+    document.getElementById("buttons-staff").style.display = "flex";
+    document.getElementById("add-staff").style.display = "flex";
+    document.getElementById("update-staff").style.display = "flex";
+    document.getElementById("delete-staff").style.display = "flex";
+}
+
+function onClickAddStaffsButton(){
+    document.getElementById("add-staff").style.display = "none";
+    document.getElementById("update-staff").style.display = "none";
+    document.getElementById("delete-staff").style.display = "none";
+    document.getElementById("list-order-staff").style.display = "none";
+    document.getElementById("main-for-list-staff").style.display = "none";
+    document.getElementById("main-for-form-staff").style.display = "flex";
+}
+
+function onClickCheckFormStaff(){
+    var Staff_Id = document.getElementById('Staff_Id').value
+    var First_Name = document.getElementById('First_Name_staff').value
+    var Last_Name = document.getElementById('Last_Name_staff').value
+    var DOB = document.getElementById('DOB_staff').value
+    var GenderFemale = document.getElementById('GenderFemale_staff').value
+    var GenderMale = document.getElementById('GenderMale_staff').value
+    var Email_Id = document.getElementById('Email_Id_staff').value
+
+    if(Staff_Id == null || Staff_Id == "" || First_Name == null || First_Name == "" || Email_Id == null || Email_Id == ""){
+        document.getElementById("error-staff").style.display = "block";
+    }else{
+        document.getElementById("main-for-form-staff").style.display = "none";
+        document.getElementById("main-for-list-staff").style.display = "flex";
+        document.getElementById("buttons-staff").style.display = "flex";
+        document.getElementById("list-order-staff").style.display = "flex";
+
+        document.getElementById("add-staff").style.display = "flex";
+        document.getElementById("update-staff").style.display = "flex";
+        document.getElementById("delete-staff").style.display = "flex";
+
+        var liStaff_Id = "<li>" + "Staff_Id: " + Staff_Id + "</li>";
+        document.getElementById("staff-list").insertAdjacentHTML('beforeend', liStaff_Id);
+        document.getElementById("Staff_Id").value = ""; // clear the value
+
+        var liFirst_Name_staff = "<li>" + "First_Name: " + First_Name + "</li>";
+        document.getElementById("staff-list").insertAdjacentHTML('beforeend', liFirst_Name_staff);
+        document.getElementById("First_Name_staff").value = ""; // clear the value
+
+        var liLast_Name_staff = "<li>" + "Last_Name: " + Last_Name + "</li>";
+        document.getElementById("staff-list").insertAdjacentHTML('beforeend', liLast_Name_staff);
+        document.getElementById("Last_Name_staff").value = ""; // clear the value
+
+        var liDOB_staff = "<li>" + "DOB: " + DOB + "</li>";
+        document.getElementById("staff-list").insertAdjacentHTML('beforeend', liDOB_staff);
+        document.getElementById("DOB_staff").value = ""; // clear the value
+
+        var liEmail_Id_staff = "<li>" + "Email_Id: " + Email_Id + "</li>";
+        document.getElementById("staff-list").insertAdjacentHTML('beforeend', liEmail_Id_staff);
+        document.getElementById("Email_Id_staff").value = ""; // clear the valu
+
+        if (document.getElementById('GenderFemale_staff').checked == false && document.getElementById('GenderMale_staff').checked == false){
+            var liGenderFemale_staff = "<li>" + "Gender: " + "</li>";
+            document.getElementById("staff-list").insertAdjacentHTML('beforeend', liGenderFemale_staff);
+        }
+
+        if (document.getElementById('GenderFemale_staff').checked == true){
+            var liGenderFemale_staff = "<li>" + "Gender: " + "Female" + "</li>";
+            document.getElementById("staff-list").insertAdjacentHTML('beforeend', liGenderFemale_staff);
+            var line = "<hr>";
+            document.getElementById("list").insertAdjacentHTML('beforeend', line);
+            document.getElementById("Gender_Female_staff").value = ""; // eventuell muss ich das noch clea
+        }else if(document.getElementById('GenderMale_staff').checked == true){
+            var liGenderMale_staff = "<li>" + "Gender: " + "Male" + "</li>";
+            document.getElementById("staff-list").insertAdjacentHTML('beforeend', liGenderMale_staff);
+            var line = "<hr>";
+            document.getElementById("staff-list").insertAdjacentHTML('beforeend', line);
+            document.getElementById("Gender_Male_staff").value = ""; // eventuell muss ich das noch clearen 
+        }else{
+            var line = "<hr>";
+            document.getElementById("staff-list").insertAdjacentHTML('beforeend', line);
+        }
+    }
+}
 
 
 
