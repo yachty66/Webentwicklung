@@ -8,117 +8,121 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-    <div class="main" id="main">
-        <!--FORM-->
-        <div class="login-admin" id="form-admin">
-            <form id="form_id" method="post" name="myform">
-                <table>
-                    <tr>
-                        <td>Username:</td>
-                        <td>
-                            <input type="text" name="user" id="username">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Password:</td>
-                        <td>
-                            <input type="password" name="user_pass" id="password">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="button" value="Login" id="submit" onclick="getCredentials()">
-                        </td>
-                    </tr>
-                </table>
-            </form>
+    <div class="responsive">
+        <div class="main" id="main">
+            <!--FORM-->
+            <div class="login-admin" id="form-admin">
+                <form id="form_id" method="post" name="myform">
+                    <table>
+                        <tr>
+                            <td>Username:</td>
+                            <td>
+                                <input type="text" name="user" id="username">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td>
+                                <input type="password" name="user_pass" id="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" value="Login" id="submit" onclick="getCredentials()">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <button id="list-staffs" onclick="onClickStaffsButton()">Staffs</button>
+            <button id="list-students" onclick="onClickStudentsButton()">Students</button>
         </div>
-        <button id="list-staffs" onclick="onClickStaffsButton()">Staffs</button>
-        <button id="list-students" onclick="onClickStudentsButton()">Students</button>
-    </div>
-    <div class="main-for-lists" id="main-for-lists">
-        <!--List Students-->
-        <div id="buttons-student">
-            <button id="add-student" onclick="onClickAddStudentsButton()">Add</button>
-            <button id="update-student">Update</button>
-            <button id="delete-student">Delete</button>
-        </div>    
-        <div class="container-for-list-order">
-            <div class="list-order" id="list-order">
-                <ul id='list'>
-                    <div class="note-for-add-button">Click the add button to add students.</div>
-                </ul>
+        <div class="main-for-lists" id="main-for-lists">
+            <!--List Students-->
+            <div id="buttons-student">
+                <button id="add-student" onclick="onClickAddStudentsButton()">Add</button>
+                <button id="update-student">Update</button>
+                <button id="delete-student">Delete</button>
+            </div>    
+            <div class="container-for-list-order">
+                <div class="list-order" id="list-order">
+                    <ul id='list'>
+                        <div class="note-for-add-button">Click the add button to add students.</div>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="main-for-form" id="main-for-form">
-        <div class="container-for-form">
-            <form">
-                <p>*Student_Id:</p>
-                <div><input type="text" id="Student_Id" placeholder="Student_Id"></div>
-                <p>*First_Name:</p>
-                <div><input type="text" id="First_Name" placeholder="First_Name"></div>
-                <p>Last_Name:</p>
-                <div><input type="text" id="Last_Name" placeholder="Last_Name"></div>
-                <p>DOB:</p>
-                <div><input type="text" id="DOB" placeholder="DOB"></div>
-                <p>Gender:</p>
-                <div><input type="radio" id="GenderFemale" placeholder="Gender" name="test"></div>
-                <label for="html">Female</label>
-                <div><input type="radio" id="GenderMale" placeholder="Gender" name="test"></div>
-                <label for="html">Male</label>
-                <p>*Department:</p>
-                <select name="departments" id="Departments">
-                    <option value="empty">------</option>
-                    <option value="Department_1">Department_1</option>
-                    <option value="Department_2">Department_2</option>
-                    <option value="Department_3">Department_3</option>
-                    <option value="Department_4">Department_4</option>
-                </select>
-                <p>*Email_Id:</p>
-                <div><input type="text" id="Email_Id" placeholder="Email_Id"></div>
-                <div class="distance-submit"><input class="submit" type="submit" value="Submit" onclick="onClickCheckForm()"></div>
-                <div class="error" id="error">*Fill out all mandatory fields</div>
-            </form>
-        </div>
-    </div>
-
-    <!--List Staff-->
-    <div class="main-for-list-staff" id="main-for-list-staff">
-        <div id="buttons-staff">
-            <button id="add-staff" onclick="onClickAddStaffsButton()">Add</button>
-            <button id="update-staff">Update</button>
-            <button id="delete-staff">Delete</button>
-        </div>
-        <div class="container-for-list-order-staff">
-            <div class="list-order-staff" id="list-order-staff">
-                <ul id='staff-list'>
-                    <div class="note-for-add-button">Click the add button to add staffs.</div>
-                </ul>
+        <div class="main-for-form" id="main-for-form">
+            <div class="container-for-form">
+                <form">
+                    <p>*Student_Id:</p>
+                    <div><input type="text" id="Student_Id" placeholder="Student_Id"></div>
+                    <p>*First_Name:</p>
+                    <div><input type="text" id="First_Name" placeholder="First_Name"></div>
+                    <p>Last_Name:</p>
+                    <div><input type="text" id="Last_Name" placeholder="Last_Name"></div>
+                    <p>DOB:</p>
+                    <div><input type="date" id="DOB" placeholder="DOB" oninput="checkAge()" onclick="hideDateDOB()"></div>
+                    <p>Gender:</p>
+                    <div><input type="radio" id="GenderFemale" placeholder="Gender" name="test"></div>
+                    <label for="html">Female</label>
+                    <div><input type="radio" id="GenderMale" placeholder="Gender" name="test"></div>
+                    <label for="html">Male</label>
+                    <p>*Department:</p>
+                    <select name="departments" id="Departments">
+                        <option value="empty">------</option>
+                        <option value="Department_1">Department_1</option>
+                        <option value="Department_2">Department_2</option>
+                        <option value="Department_3">Department_3</option>
+                        <option value="Department_4">Department_4</option>
+                    </select>
+                    <p>*Email_Id:</p>
+                    <div><input type="text" id="Email_Id" placeholder="Email_Id"></div>
+                    <p>Joining Date:</p>
+                    <div><input type="date" id="Joining_Date" placeholder="Joining Date" min="2015-01-01" onclick="hideDateJoin()"></div>
+                    <div class="distance-submit"><input class="submit" type="submit" value="Submit" onclick="onClickCheckForm()"></div>
+                    <div class="error" id="error">*Fill out all mandatory fields</div>
+                </form>
             </div>
-        </div>    
-    </div>
-    <div class="main-for-form-staff" id="main-for-form-staff">
-        <div class="container-for-form-staff">
-            <form">
-                <p>*Staff_Id:</p>
-                <div><input type="text" id="Staff_Id" placeholder="Staff_Id"></div>
-                <p>*First_Name:</p>
-                <div><input type="text" id="First_Name_staff" placeholder="First_Name"></div>
-                <p>Last_Name:</p>
-                <div><input type="text" id="Last_Name_staff" placeholder="Last_Name"></div>
-                <p>DOB:</p>
-                <div><input type="text" id="DOB_staff" placeholder="DOB"></div>
-                <p>Gender:</p>
-                <div><input type="radio" id="GenderFemale_staff" placeholder="Gender" name="test"></div>
-                <label for="html">Female</label>
-                <div><input type="radio" id="GenderMale_staff" placeholder="Gender" name="test"></div>
-                <label for="html">Male</label>
-                <p>*Email_Id:</p>
-                <div><input type="text" id="Email_Id_staff" placeholder="Email_Id"></div>
-                <div class="distance-submit"><input class="submit" type="submit" value="Submit" onclick="onClickCheckFormStaff()"></div>
-                <div class="error-staff" id="error-staff">*Fill out all mandatory fields</div>
-            </form>
+        </div>
+    
+        <!--List Staff-->
+        <div class="main-for-list-staff" id="main-for-list-staff">
+            <div id="buttons-staff">
+                <button id="add-staff" onclick="onClickAddStaffsButton()">Add</button>
+                <button id="update-staff">Update</button>
+                <button id="delete-staff">Delete</button>
+            </div>
+            <div class="container-for-list-order-staff">
+                <div class="list-order-staff" id="list-order-staff">
+                    <ul id='staff-list'>
+                        <div class="note-for-add-button">Click the add button to add staffs.</div>
+                    </ul>
+                </div>
+            </div>    
+        </div>
+        <div class="main-for-form-staff" id="main-for-form-staff">
+            <div class="container-for-form-staff">
+                <form">
+                    <p>*Staff_Id:</p>
+                    <div><input type="text" id="Staff_Id" placeholder="Staff_Id"></div>
+                    <p>*First_Name:</p>
+                    <div><input type="text" id="First_Name_staff" placeholder="First_Name"></div>
+                    <p>Last_Name:</p>
+                    <div><input type="text" id="Last_Name_staff" placeholder="Last_Name"></div>
+                    <p>DOB:</p>
+                    <div><input type="text" id="DOB_staff" placeholder="DOB"></div>
+                    <p>Gender:</p>
+                    <div><input type="radio" id="GenderFemale_staff" placeholder="Gender" name="test"></div>
+                    <label for="html">Female</label>
+                    <div><input type="radio" id="GenderMale_staff" placeholder="Gender" name="test"></div>
+                    <label for="html">Male</label>
+                    <p>*Email_Id:</p>
+                    <div><input type="text" id="Email_Id_staff" placeholder="Email_Id"></div>
+                    <div class="distance-submit"><input class="submit" type="submit" value="Submit" onclick="onClickCheckFormStaff()"></div>
+                    <div class="error-staff" id="error-staff">*Fill out all mandatory fields</div>
+                </form>
+            </div>
         </div>
     </div>
     <script src="admin.js"></script>    

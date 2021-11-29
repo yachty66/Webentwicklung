@@ -6,6 +6,15 @@ body {
     margin: 0;
 }
 
+.responsive{
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #main{
     flex-direction: column;
     background-color: #5200a3;
@@ -275,6 +284,18 @@ hr{
     margin-top: 19px;
     color: #5200a3;
     display: none;
+}
+
+@media screen and (max-width: 1440px) {
+    .login-admin{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        color: #5200a3;
+        background-color: green;
+        width: 50%;
+        height: 30%;
+    }
 }
 
 /*#buttons-staffs{

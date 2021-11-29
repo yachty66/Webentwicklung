@@ -4,7 +4,7 @@ function getCredentials(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    if(username == "a" && password == "b"){
+    if(username == "Admin" && password == "Admin"){
         alert ("Login successfully");
         document.getElementById("form-staff").style.display = "none";
         document.getElementById("container-for-course-list").style.display = "flex";

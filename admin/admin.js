@@ -9,7 +9,7 @@ function getCredentials(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    if(username == "a" && password == "b"){
+    if(username == "a" && password == "a"){
         alert ("Login successfully");
         document.getElementById("form-admin").style.display = "none";
         document.getElementById("list-staffs").style.display = "flex";
@@ -122,6 +122,65 @@ function onClickCheckForm(){
     }
 }
 
+
+//code who hides current date and future date DOB
+function hideDateDOB(){
+    var today = new Date();
+    var yesterday = new Date(today.getTime() - 24*60*60*1000);
+    var dd = yesterday.getDate();
+    var mm = yesterday.getMonth() + 1; //January is 0!
+    var yyyy = yesterday.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm;
+    } 
+        
+    yesterday = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("DOB").setAttribute("max", yesterday);
+}
+
+//if choosed date - current date is < 17 or > 60 throw InvalidDOB
+function checkAge(){
+    document.getElementById("DOB").addEventListener("change", function(){
+        var input = this.value;
+        var birthDate = new Date(input);
+        var today = new Date();
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
+        {
+            age--;
+        }
+        if(age < 17 || age > 60){
+            document.getElementById('DOB').value = "";
+            alert("invalid DOB");
+            throw "invalid DOB";
+        }
+    })
+}
+
+//hides date for joining date
+function hideDateJoin(){
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm;
+    } 
+        
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("Joining_Date").setAttribute("max", today);
+}
 
 //staff
 function onClickStaffsButton(){
