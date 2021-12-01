@@ -37,6 +37,7 @@ body {
     height: 30%;
 }
 
+
 #login-staff-container{
     align-items: center;
     display: flex;
@@ -72,7 +73,7 @@ body {
     background-color: #5200a3;
     height: 100%;
     width: 1440px;
-    display: none;
+    display: flex;
 
     flex-direction: column;
 
@@ -131,12 +132,13 @@ ul li {
 .list-order{
     align-items: center;
     justify-content: center;
-    display: flex;
     flex-direction: column;
-    height: 95%;
+    display: flex;
+    height: 100%;
     width: 50%;
     background-color: green;
 }
+
 
 .main-for-form{
     background-color: #5200a3;
@@ -150,7 +152,7 @@ ul li {
 .container-for-form{
     width: 50%;
     background-color: green;
-    height: 95%;
+    height: 80%;
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -170,10 +172,6 @@ input{
 }
 
 .distance-submit{
-    margin-top: 19px;
-}
-
-.distance-submit-staff{
     margin-top: 19px;
 }
 
@@ -258,8 +256,7 @@ hr{
     align-items: center;
     justify-content: center;
     display: flex;
-    flex-direction: column;
-    height: 95%;
+    height: 100%;
     width: 50%;
     background-color: green;
 }
@@ -276,12 +273,13 @@ hr{
 .container-for-form-staff{
     width: 50%;
     background-color: green;
-    height: 95%;
+    height: 80%;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     display: flex;
 }
+
 
 .error-staff{
     margin-top: 19px;
@@ -297,40 +295,15 @@ hr{
     color: #5200a3;
 }
 
-.tableZebraStaff{
-    table-layout: fixed;
-    width: 100%;
-    border: 1;
-    word-wrap: break-word;
-    color: #5200a3;
-}
-
 .container-for-student-selectors{
-    display: flex;
     height: 10%;
     width: 100%;
-}
-
-.container-for-student-selectors-staff{
-    display: flex;
-    height: 10%;
-    width: 100%;
+    background-color: pink;
 }
 
 .container-table{
     height: 90%;
-}
-
-.container-table-staff{
-    height: 90%;
-}
-
-.semester-container{
-    margin-left: 10px;
-}
-
-.semester-container-staff{
-    margin-left: 10px;
+    background-color: aqua;
 }
 
 @media screen and (max-width: 1440px) {
@@ -345,7 +318,85 @@ hr{
     }
 }
 
+/*#buttons-staffs{
+    width: 100%;
+    height: 10%;
+    display: none;
 
+    justify-content: center;
+
+    align-items: center;
+}
+
+.main-for-list-staff{
+    background-color: #5200a3;
+    height: 100%;
+    width: 1440px;
+    display: none;
+    flex-direction: column;
+}
+
+#add-staff{
+    margin-right: 10%;
+    justify-content: center;
+    color: #5200a3;
+    width: 100px;
+    background-color: green;
+    display: none;
+}
+
+#update-staff{
+    justify-content: center;
+    color: #5200a3;
+    width: 100px;
+    background-color: green;
+    display: none;
+}
+
+#delete-staff{
+    margin-left: 10%;
+    justify-content: center;
+    color: #5200a3;
+    width: 100px;
+    background-color: green;
+    display: none;
+}
+
+.container-for-list-order-staff{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.list-order-staff{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    background-color: green;
+}
+
+.main-for-form-staff{
+    background-color: #5200a3;
+    height: 100%;
+    width: 1440px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-for-form-staff{
+    width: 50%;
+    background-color: green;
+    height: 80%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
 
 
 

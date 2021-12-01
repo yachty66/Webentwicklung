@@ -83,6 +83,18 @@
                     </div>
                 </div>
             </div>
+            
+            
+            
+            <!--<div class="container-for-list-order">
+                <div class="list-order" id="list-order">
+                    <ul id='list'>
+                        <div class="note-for-add-button">Click the add button to add students.</div>
+                    </ul>
+                </div>
+            </div>-->
+
+
         </div>
         <div class="main-for-form" id="main-for-form">
             <div class="container-for-form">
@@ -125,7 +137,6 @@
                 <button id="update-staff">Update</button>
                 <button id="delete-staff">Delete</button>
             </div>
-             <!--here starts the table (list)-->  
             <div class="container-for-list-order-staff">
                 <div class="list-order-staff" id="list-order-staff">
                     <div class="container-for-student-selectors-staff">
@@ -146,7 +157,6 @@
                                 <option value="Summer">Summer</option>
                                 <option value="Winter">Winter</option>
                             </select>
-                        </div>
                     </div>
                     <div class="container-table-staff">
                         <table id="table-staff" class="tableZebraStaff" border="1">
@@ -175,7 +185,7 @@
                     <p>Last_Name:</p>
                     <div><input type="text" id="Last_Name_staff" placeholder="Last_Name"></div>
                     <p>DOB:</p>
-                    <div><input type="date" id="DOB_staff" placeholder="DOB" oninput="checkAgeStaff()" onclick="hideDateDOBStaff()"></div>
+                    <div><input type="text" id="DOB_staff" placeholder="DOB" oninput="checkAgeStaff()" onclick="hideDateDOBStaff()"></div>
                     <p>Gender:</p>
                     <div><input type="radio" id="GenderFemale_staff" placeholder="Gender" name="test"></div>
                     <label for="html">Female</label>
@@ -192,8 +202,8 @@
                     <p>*Email_Id:</p>
                     <div><input type="text" id="Email_Id_staff" placeholder="Email_Id"></div>
                     <p>Joining Date:</p>
-                    <div><input type="date" id="Joining_Date_staff" placeholder="Joining DateStaff" min="2015-01-01" onclick="hideDateJoinStaff()"></div>
-                    <div class="distance-submit-staff"><input id="unique" class="submitStaff" type="submit" value="Submitss" onclick="onClickCheckFormStaff()"></div>
+                    <div><input type="date" id="Joining_DateStaff" placeholder="Joining DateStaff" min="2015-01-01" onclick="hideDateJoinStaff()"></div>
+                    <div class="distance-submit"><input class="submit" type="submit" value="Submit" onclick="onClickCheckFormStaff()"></div>
                     <div class="error-staff" id="error-staff">*Fill out all mandatory fields</div>
                 </form>
             </div>
