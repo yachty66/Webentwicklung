@@ -1,8 +1,3 @@
-/*var objPassword = [{
-    username: "a",
-    password: "b"
-}]*/
-
 var attempt = 3;
 
 function getCredentials(){
@@ -48,11 +43,9 @@ function onClickAddStudentsButton(){
 }
 
 function onClickCheckForm(){
-
     "use strict";
     var table = document.getElementById("table");
     var row = document.createElement("tr");
-    console.log(row);
     var td1 = document.createElement("td");
     var td2 = document.createElement("td");
     var td3 = document.createElement("td");
@@ -116,7 +109,7 @@ function onClickCheckForm(){
 
         document.getElementById("Student_Id").value = "";
         document.getElementById("First_Name").value = "";
-        document.getElementById("Last_Name").value = ""; // clear the value
+        document.getElementById("Last_Name").value = ""; 
         document.getElementById("DOB").value = "";
         document.getElementById("Departments").value = "empty";
         document.getElementById("Email_Id").value = ""; 
@@ -195,7 +188,7 @@ function changeDisplayTableDepartments(){
     console.log(tr[1].getElementsByTagName("td")[5]);
 
     for(i=0; i< tr.length; i++){
-        td = tr[i+1].getElementsByTagName("td")[5]; // hier gibt es noch fehlermeldung
+        td = tr[i+1].getElementsByTagName("td")[5]; 
         if(departmentSelected != "empty" && td.textContent != departmentSelected){
             tr[i+1].style.display = "none";
         }else{
@@ -259,15 +252,12 @@ function onClickAddStaffsButton(){
     document.getElementById("list-order-staff").style.display = "none";
     document.getElementById("main-for-form-staff").style.display = "flex";
     document.getElementById("main-for-list-staff").style.display = "none";
-    
 }
 
 function onClickCheckFormStaff(){
-    console.log("hallo");
     "use strict";
     var table = document.getElementById("table-staff");
     var row = document.createElement("tr");
-    console.log(row);
     var td1 = document.createElement("td");
     var td2 = document.createElement("td");
     var td3 = document.createElement("td");
@@ -394,6 +384,59 @@ function hideDateJoin(){
     } 
     today = yyyy + '-' + mm + '-' + dd;
     document.getElementById("Joining_Date_staff").setAttribute("max", today);
+}
+
+var summer = false
+
+function changeDisplayTableDepartmentsStaff(){
+    //select value
+    var sel = document.getElementById('departmentsSelectorStaff');
+    var departmentSelected = sel.value;
+
+    table = document.getElementById("table-staff");
+    tr = table.getElementsByTagName("tr");
+
+    for(i=0; i< tr.length; i++){
+        td = tr[i+1].getElementsByTagName("td")[5]; // hier gibt es noch fehlermeldung
+        td2 = tr[i+1].getElementsByTagName("td")[7];
+        if(departmentSelected != "empty" && td.textContent != departmentSelected){
+            tr[i+1].style.display = "none";
+        }else{
+            tr[i+1].style.display = "";
+        }
+    }
+}
+
+function changeDisplayTableSemesterStaff(){
+    //select value
+    var sel = document.getElementById("semesterSelectorStaff");
+    var semesterSelected = sel.value;
+
+    table = document.getElementById("table-staff");
+    tr = table.getElementsByTagName("tr");
+
+    for(i=0; i< tr.length; i++){
+        td = tr[i+1].getElementsByTagName("td")[7].textContent;
+        var splitDate = td.split("-")[1];
+        if(semesterSelected == "Winter"){
+            if(splitDate == "10" || splitDate == "11" || splitDate == "12" || splitDate == "01" || splitDate == "02" || splitDate == "03"){
+                tr[i+1].style.display = "";
+            }
+            else{
+                tr[i+1].style.display = "none";
+            }  
+        }
+        else if (semesterSelected == "Summer"){
+            if(splitDate == "04" || splitDate == "05" || splitDate == "06" || splitDate == "07" || splitDate == "08" || splitDate == "09"){
+                tr[i+1].style.display = "";
+            }else{
+                tr[i+1].style.display = "none";
+            }  
+        }
+        else{
+            tr[i+1].style.display = "";
+        }
+    }
 }
 
 
