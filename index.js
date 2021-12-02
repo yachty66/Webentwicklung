@@ -9,7 +9,7 @@ function getCredentials(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    if(username == "a" && password == "a"){
+    if(username == "Admin" && password == "Admin"){
         alert ("Login successfully");
         document.getElementById("form-admin").style.display = "none";
         document.getElementById("list-staffs").style.display = "flex";
